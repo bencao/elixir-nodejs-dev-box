@@ -39,7 +39,7 @@ ENV TERM xterm-256color
 
 # Install Docker & Docker Compose
 
-RUN curl -LSso /usr/local/bin/docker https://get.docker.com/builds/Linux/x86_64/docker-1.10.2 && \
+RUN curl -LSso /usr/local/bin/docker https://get.docker.com/builds/Linux/x86_64/docker-1.10.3 && \
     chmod +x /usr/local/bin/docker && \
     curl -LSso /usr/local/bin/docker-compose https://github.com/docker/compose/releases/download/1.6.2/docker-compose-Linux-x86_64 && \
     chmod +x /usr/local/bin/docker-compose
@@ -56,6 +56,6 @@ ENV EDITOR vim
 RUN mix local.hex --force && \
     mix hex.info && \
     mix local.rebar --force && \
-    mix archive.install https://github.com/phoenixframework/phoenix/releases/download/v1.1.3/phoenix_new-1.1.3.ez
+    mix archive.install https://github.com/phoenixframework/phoenix/releases/download/v1.1.4/phoenix_new-1.1.4.ez
 
 CMD /bin/bash
