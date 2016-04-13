@@ -36,20 +36,12 @@ RUN git clone git://github.com/robbyrussell/oh-my-zsh.git /root/.oh-my-zsh && \
 RUN echo "export TERM=xterm-256color" >> ~/.zshrc
 ENV TERM xterm-256color
 
-
 # Install Docker & Docker Compose
 
 RUN curl -LSso /usr/local/bin/docker https://get.docker.com/builds/Linux/x86_64/docker-1.10.3 && \
     chmod +x /usr/local/bin/docker && \
     curl -LSso /usr/local/bin/docker-compose https://github.com/docker/compose/releases/download/1.6.2/docker-compose-Linux-x86_64 && \
     chmod +x /usr/local/bin/docker-compose
-
-# Install VIM in docker
-
-RUN curl -LSso /usr/local/bin/vim http://bit.ly/vim_in_docker && \
-    chmod +x /usr/local/bin/vim && \
-    echo "export EDITOR=vim" >> ~/.zshrc
-ENV EDITOR vim
 
 # Install Mix & Hex & Rebar & Phoenix
 
